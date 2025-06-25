@@ -1,0 +1,650 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21689,        642]
+NotebookOptionsPosition[     18921,        586]
+NotebookOutlinePosition[     19326,        602]
+CellTagsIndexPosition[     19283,        599]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Exit", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.959830180808131*^9, 3.959830183710116*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"b93f6bd8-efb1-4983-ba23-0a3f57f0a7ca"],
+
+Cell[CellGroupData[{
+
+Cell["Simple Calculation of Rest-Mass Injection", "Title",
+ CellChangeTimes->{{3.959830081778811*^9, 
+  3.959830106002866*^9}},ExpressionUUID->"6e345f77-4fef-40a1-bcd2-\
+c8eef71458d2"],
+
+Cell[CellGroupData[{
+
+Cell["0. Multiplicities and Masses", "Chapter",
+ CellChangeTimes->{{3.959830265715253*^9, 
+  3.9598303121861763`*^9}},ExpressionUUID->"efb08380-2c60-43cf-b40b-\
+c4fb6d6cd966"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MPl", ":=", 
+   RowBox[{"1.2", "*", 
+    SuperscriptBox["10", "19"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ge", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g\[Mu]", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g\[Tau]", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gb", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "3", "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gc", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "3", "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gs", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "3", "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gu", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "3", "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gd", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"1", "/", "2"}]}], "+", "1"}], ")"}], "*", "3", "*", "2"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"me", ":=", 
+   FractionBox[
+    RowBox[{"0.510999", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}], "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m\[Mu]", ":=", 
+   FractionBox[
+    RowBox[{"105.658", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}], "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m\[Tau]", ":=", 
+   FractionBox[
+    RowBox[{"1776.93", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}], "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mb", ":=", 
+   FractionBox["4.183", "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mc", ":=", 
+   FractionBox["1.2730", "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ms", ":=", 
+   FractionBox[
+    RowBox[{"93.5", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}], "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mu", ":=", 
+   FractionBox[
+    RowBox[{"2.16", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}], "MPl"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"md", ":=", 
+   FractionBox[
+    RowBox[{"4.70", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "3"}]]}], "MPl"]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.959831025968952*^9, 3.9598312757357483`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"5d02df2e-3e0d-4340-955d-3ffad5829799"],
+
+Cell["[REF : [2]]", "Text",
+ CellChangeTimes->{{3.95983085744975*^9, 
+  3.959830862402623*^9}},ExpressionUUID->"66fcb3b3-b9e0-46ec-906d-\
+ba93b321dde4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["1. Radiation Energy Density just Before EWSB", "Chapter",
+ CellChangeTimes->{{3.95983011416366*^9, 3.959830132186452*^9}, {
+  3.959830406591758*^9, 
+  3.9598304125582*^9}},ExpressionUUID->"e5d417f5-016f-429f-a1b4-d93a1bb142ea"],
+
+Cell[TextData[{
+ "Only tau lepton which is most heaviest among SM particles is annihilated. \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["g", "*"], " ", "=", " ", 
+     RowBox[{"106.75", " ", "->", " ", "96.25"}]}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6c0cdbc2-0ac9-44ac-9964-cb503b5bacc4"],
+ " Then, radiation energy density just before electroweak symmetry breaking is"
+}], "Text",
+ CellChangeTimes->{{3.959830353296094*^9, 3.959830393285342*^9}, {
+  3.959830810841507*^9, 
+  3.9598308297801123`*^9}},ExpressionUUID->"f66a62be-0451-4cc9-933c-\
+51a48f7d092f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RadiationEDBeforeEWSB", "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["Pi", "2"], "30"], "*", "96.25", "*", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["159.5", "MPl"], ")"}], "4"]}], " ", "//", "N"}]}]], "Input",\
+
+ CellChangeTimes->{{3.959830421229309*^9, 3.959830451550948*^9}, {
+   3.9598305010171013`*^9, 3.9598305053149633`*^9}, 3.959830607201404*^9, {
+   3.959830695146757*^9, 3.959830696197163*^9}, {3.9598307840855227`*^9, 
+   3.959830831710092*^9}, {3.959831926457045*^9, 3.959831929235721*^9}, 
+   3.9598321153836107`*^9, {3.959832153743169*^9, 3.9598321594511747`*^9}, {
+   3.959832440399235*^9, 3.959832454402375*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"bf6ddc25-109f-43aa-9bc8-d7c509885d91"],
+
+Cell[BoxData["9.883186578844977`*^-67"], "Output",
+ CellChangeTimes->{{3.959830832080413*^9, 3.959830839927265*^9}, 
+   3.959831932293847*^9, 3.959832209817676*^9, {3.959832451659926*^9, 
+   3.9598324586517973`*^9}},
+ CellLabel->"Out[36]=",ExpressionUUID->"88e2989f-ce45-4414-86f7-9ec38605a4d7"]
+}, Open  ]],
+
+Cell[TextData[{
+ "where the crossover happens at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["T", "c"], "=", "159.5"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a6751641-1d21-416a-ae6d-2fa30e7118b1"],
+ "GeV [REF: [1]] by the help of lattice calculations."
+}], "Text",
+ CellChangeTimes->{{3.9598305133764772`*^9, 3.959830537442457*^9}, {
+  3.959830594995912*^9, 3.959830597116387*^9}, {3.9598306993128357`*^9, 
+  3.9598307063103237`*^9}},ExpressionUUID->"9cbadd6a-d7b8-4d59-af66-\
+44624aabf576"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2. Rest-Mass Injection after EWSB", "Chapter",
+ CellChangeTimes->{{3.95983011416366*^9, 3.959830132186452*^9}, {
+  3.959830406591758*^9, 3.9598304125582*^9}, {3.959831321060967*^9, 
+  3.959831327823333*^9}},ExpressionUUID->"478920e4-1c54-4ab1-aee7-\
+7b50b0283add"],
+
+Cell[TextData[{
+ "Only eight components (e,\[Mu],\[Tau],u,d,c,s,b) are massive. (Particles \
+like ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["W", "\[PlusMinus]"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "047e6406-3334-4216-899c-4e489b6e8f5c"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Z", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2b47a123-d290-4dfd-b57a-3a46304d0e46"],
+ " are Boltzmann suppressed first compared with aforementioned ones, due to \
+relatively high mass.) Non-relativistic energy density is calculated by\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[CapitalDelta]", "RMI"], "=", 
+     RowBox[{
+      SubscriptBox["\[Sum]", "i"], 
+      RowBox[{
+       SubscriptBox["m", "i"], 
+       RowBox[{
+        SubscriptBox["n", "i"], "(", 
+        SubscriptBox["T", "EW"], ")"}]}]}]}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["n", "i"], "(", "T", ")"}], "=", 
+     RowBox[{
+      FractionBox["3", "4"], 
+      FractionBox[
+       RowBox[{"\[Zeta]", "(", "3", ")"}], 
+       SuperscriptBox["\[Pi]", "2"]], 
+      SubscriptBox["g", "i"], 
+      SuperscriptBox["T", "3"]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "12ca4842-efcf-42ae-ba8e-0518a1c9c2c3"]
+}], "Text",
+ CellChangeTimes->{{3.959831448929225*^9, 3.95983154995606*^9}, {
+  3.959831586912691*^9, 
+  3.9598316751802883`*^9}},ExpressionUUID->"5958e8d5-2ad8-4e42-ac6f-\
+3cc3a0596254"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"neTEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "ge", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n\[Mu]TEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "g\[Mu]", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n\[Tau]TEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "g\[Tau]", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nbTEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "gb", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ncTEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "gc", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nsTEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "gs", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nuTEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "gu", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ndTEW", ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"3", 
+       RowBox[{"Zeta", "[", "3", "]"}]}], 
+      RowBox[{"4", 
+       SuperscriptBox["Pi", "2"]}]], "*", "gd", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["159.5", "MPl"], ")"}], "3"]}], "//", "N"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9598316854150248`*^9, 3.95983169476478*^9}, {
+  3.959831744836831*^9, 3.959831834823616*^9}, {3.959832118199645*^9, 
+  3.959832140610257*^9}, {3.959832172629629*^9, 3.959832199805142*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"da439e47-7392-44dd-a8e3-3baf37c2772e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatterEDAfterEWSB", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"me", "*", "neTEW"}], "+", 
+    RowBox[{"m\[Mu]", "*", "n\[Mu]TEW"}], "+", 
+    RowBox[{"m\[Tau]", "*", "n\[Tau]TEW"}], "+", 
+    RowBox[{"mb", "*", "nbTEW"}], "+", 
+    RowBox[{"mc", "*", "ncTEW"}], "+", 
+    RowBox[{"ms", "*", "nsTEW"}], "+", 
+    RowBox[{"mu", "*", "nuTEW"}], "+", 
+    RowBox[{"md", "*", "ndTEW"}]}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.9598318543620996`*^9, 3.9598318927134933`*^9}, {
+  3.959831937300828*^9, 3.959831939267006*^9}, {3.959832429857379*^9, 
+  3.959832434008809*^9}, {3.959832471865923*^9, 3.959832475486835*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"664a2183-8c2b-4e66-a57d-28d4be911b22"],
+
+Cell[BoxData["1.3264733836650164`*^-69"], "Output",
+ CellChangeTimes->{3.95983189301901*^9, 3.959831939698195*^9, 
+  3.959832214317677*^9, 3.959832479229355*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"489c9cbf-66b8-4ded-b295-9f46df39fcc5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RadiationEDAfterEWSB", "=", 
+  RowBox[{
+   RowBox[{"RadiationEDBeforeEWSB", "-", "MatterEDAfterEWSB"}], "//", 
+   "N"}]}]], "Input",
+ CellChangeTimes->{{3.959832484269462*^9, 3.959832500246895*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"1e3e7593-520e-477f-baa3-a42c05d12a33"],
+
+Cell[BoxData["9.869921845008327`*^-67"], "Output",
+ CellChangeTimes->{3.959832500540347*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"e16c435f-dd34-45f9-9281-5c5c4341a140"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3. E-folds between start of RD and MR equality", "Chapter",
+ CellChangeTimes->{{3.9598319557954073`*^9, 
+  3.959831971808035*^9}},ExpressionUUID->"174bf1d6-258d-4dd4-9164-\
+9f6d102c8e29"],
+
+Cell[TextData[{
+ "MR(Matter-radiation equality) ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", "MR"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5ca7e5f6-e623-4a66-9937-cf26df142633"],
+ " is defined as a point where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Rho]", "m"], "(", 
+     SubscriptBox["N", "MR"], ")"}], "=", 
+    RowBox[{
+     SubscriptBox["\[Rho]", "r"], "(", 
+     SubscriptBox["N", "MR"], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f206baef-8c5a-495a-ace3-2a37260cd23d"],
+ ". Since \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SubscriptBox["\[Rho]", "m"], 
+     SubscriptBox["\[Rho]", "r"]], "=", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["a", 
+       RowBox[{"-", "3"}]], 
+      SuperscriptBox["a", 
+       RowBox[{"-", "4"}]]], "=", "a"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "86c472a0-1f3f-4b2b-bac9-c5d0c687bb95"],
+ ", it is obvious that\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"(", 
+      FractionBox[
+       SubscriptBox["\[Rho]", "m"], 
+       SubscriptBox["\[Rho]", "r"]], ")"}], "MR"], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox[
+       RowBox[{"a", "(", 
+        FractionBox[
+         SubscriptBox["\[Rho]", "m"], 
+         SubscriptBox["\[Rho]", "r"]], ")"}], "rad"], " ", "->", "1"}], "=", 
+     RowBox[{
+      SubscriptBox[
+       RowBox[{"a", "(", 
+        FractionBox[
+         SubscriptBox["\[Rho]", "m"], 
+         SubscriptBox["\[Rho]", "r"]], ")"}], "rad"], "=", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox[
+         RowBox[{
+          SuperscriptBox["e", "\[CapitalDelta]N"], "(", 
+          FractionBox[
+           SubscriptBox["\[Rho]", "m"], 
+           SubscriptBox["\[Rho]", "r"]], ")"}], "rad"], " ", "->", " ", 
+        "\[CapitalDelta]N"}], "=", 
+       SubscriptBox[
+        RowBox[{"ln", "(", 
+         FractionBox[
+          SubscriptBox["\[Rho]", "r"], 
+          SubscriptBox["\[Rho]", "m"]], ")"}], "rad"]}]}]}]}], 
+   TraditionalForm]],ExpressionUUID->"e7e4ef19-74a4-4807-808f-241568943f48"]
+}], "Text",
+ CellChangeTimes->{{3.9598322255129957`*^9, 3.959832417071062*^9}, {
+  3.959832507067391*^9, 
+  3.9598325078901663`*^9}},ExpressionUUID->"ddff7473-f5bb-4d20-9b54-\
+9b2c7159009b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Log", "[", 
+   FractionBox["RadiationEDAfterEWSB", "MatterEDAfterEWSB"], "]"}], "//", 
+  "N"}]], "Input",
+ CellChangeTimes->{{3.9598319430400553`*^9, 3.959831948208716*^9}, {
+  3.9598320485238237`*^9, 3.9598320521556664`*^9}, {3.9598325201030817`*^9, 
+  3.959832529612788*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"9ae1dcbf-316d-40ee-8a95-10b966e68ac2"],
+
+Cell[BoxData["6.612138291653705`"], "Output",
+ CellChangeTimes->{3.959831948544964*^9, 3.959832529911994*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"f3a37eb6-f203-41d3-8cdf-71fa68c8a68e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["#. REF", "Chapter",
+ CellChangeTimes->{{3.959830540249386*^9, 
+  3.95983054535505*^9}},ExpressionUUID->"cf847707-c8c5-4756-8e70-\
+e48e56c44f8f"],
+
+Cell["\<\
+[1] : 
+@article{DOnofrio:2015gop,
+    author = \[OpenCurlyDoubleQuote]D\[CloseCurlyQuote]Onofrio, Michela and \
+Rummukainen, Kari\[CloseCurlyDoubleQuote],
+    title = \[OpenCurlyDoubleQuote]{Standard model cross-over on the lattice}\
+\[CloseCurlyDoubleQuote],
+    eprint = \[OpenCurlyDoubleQuote]1508.07161\[CloseCurlyDoubleQuote],
+    archivePrefix = \[OpenCurlyDoubleQuote]arXiv\[CloseCurlyDoubleQuote],
+    primaryClass = \[OpenCurlyDoubleQuote]hep-ph\[CloseCurlyDoubleQuote],
+    reportNumber = \[OpenCurlyDoubleQuote]HIP-2015-30-TH\
+\[CloseCurlyDoubleQuote],
+    doi = \[OpenCurlyDoubleQuote]10.1103/PhysRevD.93.025003\
+\[CloseCurlyDoubleQuote],
+    journal = \[OpenCurlyDoubleQuote]Phys. Rev. D\[CloseCurlyDoubleQuote],
+    volume = \[OpenCurlyDoubleQuote]93\[CloseCurlyDoubleQuote],
+    number = \[OpenCurlyDoubleQuote]2\[CloseCurlyDoubleQuote],
+    pages = \[OpenCurlyDoubleQuote]025003\[CloseCurlyDoubleQuote],
+    year = \[OpenCurlyDoubleQuote]2016\[CloseCurlyDoubleQuote]
+}
+[2] : 
+@article{ParticleDataGroup:2024cfk,
+    author = \[OpenCurlyDoubleQuote]Navas, S. and others\
+\[CloseCurlyDoubleQuote],
+    collaboration = \[OpenCurlyDoubleQuote]Particle Data Group\
+\[CloseCurlyDoubleQuote],
+    title = \[OpenCurlyDoubleQuote]{Review of particle physics}\
+\[CloseCurlyDoubleQuote],
+    doi = \[OpenCurlyDoubleQuote]10.1103/PhysRevD.110.030001\
+\[CloseCurlyDoubleQuote],
+    journal = \[OpenCurlyDoubleQuote]Phys. Rev. D\[CloseCurlyDoubleQuote],
+    volume = \[OpenCurlyDoubleQuote]110\[CloseCurlyDoubleQuote],
+    number = \[OpenCurlyDoubleQuote]3\[CloseCurlyDoubleQuote],
+    pages = \[OpenCurlyDoubleQuote]030001\[CloseCurlyDoubleQuote],
+    year = \[OpenCurlyDoubleQuote]2024\[CloseCurlyDoubleQuote]
+}\
+\>", "Text",
+ CellChangeTimes->{{3.9598305485766497`*^9, 3.959830586010219*^9}, {
+  3.959830914477779*^9, 
+  3.959830914680949*^9}},ExpressionUUID->"802007cc-fa5d-42bf-a9af-\
+412396a73c75"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{691.5, 851.25},
+WindowMargins->{{-2.25, Automatic}, {Automatic, -22.5}},
+FrontEndVersion->"14.0 for Linux x86 (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"fb5a5935-1062-4bbd-8023-24e79c5570cb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 215, 4, 29, "Input",ExpressionUUID->"b93f6bd8-efb1-4983-ba23-0a3f57f0a7ca"],
+Cell[CellGroupData[{
+Cell[798, 28, 184, 3, 160, "Title",ExpressionUUID->"6e345f77-4fef-40a1-bcd2-c8eef71458d2"],
+Cell[CellGroupData[{
+Cell[1007, 35, 175, 3, 69, "Chapter",ExpressionUUID->"efb08380-2c60-43cf-b40b-c4fb6d6cd966"],
+Cell[1185, 40, 3204, 112, 502, "Input",ExpressionUUID->"5d02df2e-3e0d-4340-955d-3ffad5829799"],
+Cell[4392, 154, 152, 3, 35, "Text",ExpressionUUID->"66fcb3b3-b9e0-46ec-906d-ba93b321dde4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4581, 162, 233, 3, 117, "Chapter",ExpressionUUID->"e5d417f5-016f-429f-a1b4-d93a1bb142ea"],
+Cell[4817, 167, 634, 16, 84, "Text",ExpressionUUID->"f66a62be-0451-4cc9-933c-51a48f7d092f"],
+Cell[CellGroupData[{
+Cell[5476, 187, 768, 16, 47, "Input",ExpressionUUID->"bf6ddc25-109f-43aa-9bc8-d7c509885d91"],
+Cell[6247, 205, 295, 4, 33, "Output",ExpressionUUID->"88e2989f-ce45-4414-86f7-9ec38605a4d7"]
+}, Open  ]],
+Cell[6557, 212, 536, 13, 35, "Text",ExpressionUUID->"9cbadd6a-d7b8-4d59-af66-44624aabf576"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7130, 230, 270, 4, 69, "Chapter",ExpressionUUID->"478920e4-1c54-4ab1-aee7-7b50b0283add"],
+Cell[7403, 236, 1504, 44, 105, "Text",ExpressionUUID->"5958e8d5-2ad8-4e42-ac6f-3cc3a0596254"],
+Cell[8910, 282, 3165, 108, 403, "Input",ExpressionUUID->"da439e47-7392-44dd-a8e3-3baf37c2772e"],
+Cell[CellGroupData[{
+Cell[12100, 394, 724, 15, 70, "Input",ExpressionUUID->"664a2183-8c2b-4e66-a57d-28d4be911b22"],
+Cell[12827, 411, 240, 3, 33, "Output",ExpressionUUID->"489c9cbf-66b8-4ded-b295-9f46df39fcc5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13104, 419, 301, 6, 29, "Input",ExpressionUUID->"1e3e7593-520e-477f-baa3-a42c05d12a33"],
+Cell[13408, 427, 171, 2, 33, "Output",ExpressionUUID->"e16c435f-dd34-45f9-9281-5c5c4341a140"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13628, 435, 193, 3, 117, "Chapter",ExpressionUUID->"174bf1d6-258d-4dd4-9164-9f6d102c8e29"],
+Cell[13824, 440, 2344, 75, 92, "Text",ExpressionUUID->"ddff7473-f5bb-4d20-9b54-9b2c7159009b"],
+Cell[CellGroupData[{
+Cell[16193, 519, 391, 8, 45, "Input",ExpressionUUID->"9ae1dcbf-316d-40ee-8a95-10b966e68ac2"],
+Cell[16587, 529, 188, 2, 55, "Output",ExpressionUUID->"f3a37eb6-f203-41d3-8cdf-71fa68c8a68e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16824, 537, 150, 3, 69, "Chapter",ExpressionUUID->"cf847707-c8c5-4756-8e70-e48e56c44f8f"],
+Cell[16977, 542, 1916, 40, 633, "Text",ExpressionUUID->"802007cc-fa5d-42bf-a9af-412396a73c75"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
